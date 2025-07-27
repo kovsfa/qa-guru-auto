@@ -42,11 +42,12 @@ public class TextBoxPage {
 
         return this;
     }
+
     public void submit() {
         submitButton.click();
     }
 
-    public TextBoxPage checkResult (String key, String value) {
+    public TextBoxPage checkResult(String key, String value) {
         outputArea.$(byText(key))
                 .shouldHave(text(value));
         return this;

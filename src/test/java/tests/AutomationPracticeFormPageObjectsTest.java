@@ -11,31 +11,32 @@ public class AutomationPracticeFormPageObjectsTest extends TestBase {
     @Test
     void successfulRegistrationTest() {
         registrationPage.openPage()
-                        .setFirstName("Sofia")
-                        .setLastName("Kovaleva")
-                        .setEmail("kov.sfa@gmail.com")
-                        .setGender("Female")
-                        .setUserNumber("7058745235")
-                        .setDateOfBirth("20", "10", "1996")
-                        .setSubjects("English")
-                        .setHobbies("Sports")
-                        .uploadPicture("cat.jpg")
-                        .setCurrentAddress("Baribaev street")
-                        .setState("Uttar Pradesh")
-                        .setCity("Agra")
-                        .submit();
+                .closeAdd()
+                .setFirstName("Sofia")
+                .setLastName("Kovaleva")
+                .setEmail("kov.sfa@gmail.com")
+                .setGender("Female")
+                .setUserNumber("7058745235")
+                .setDateOfBirth("20", "10", "1996")
+                .setSubjects("English")
+                .setHobbies("Sports")
+                .uploadPicture("cat.jpg")
+                .setCurrentAddress("Baribaev street")
+                .setState("Uttar Pradesh")
+                .setCity("Agra")
+                .submit();
 
         // Checks
         registrationPage.checkResult("Student Name", "Sofia Kovaleva")
-                        .checkResult("Student Email", "kov.sfa@gmail.com")
-                        .checkResult("Gender", "Female")
-                        .checkResult("Mobile", "7058745235")
-                        .checkResult("Date of Birth", "20 November,1996")
-                        .checkResult("Subjects", "English")
-                        .checkResult("Hobbies", "Sports")
-                        .checkResult("Picture", "cat.jpg")
-                        .checkResult("Address", "Baribaev street")
-                        .checkResult("State and City", "Uttar Pradesh Agra");
+                .checkResult("Student Email", "kov.sfa@gmail.com")
+                .checkResult("Gender", "Female")
+                .checkResult("Mobile", "7058745235")
+                .checkResult("Date of Birth", "20 November,1996")
+                .checkResult("Subjects", "English")
+                .checkResult("Hobbies", "Sports")
+                .checkResult("Picture", "cat.jpg")
+                .checkResult("Address", "Baribaev street")
+                .checkResult("State and City", "Uttar Pradesh Agra");
     }
 
     @Test

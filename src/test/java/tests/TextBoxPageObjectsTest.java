@@ -6,6 +6,7 @@ import pages.TextBoxPage;
 
 public class TextBoxPageObjectsTest extends TestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
+
     @Test
     void textBox() {
         textBoxPage.openPage()

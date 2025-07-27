@@ -44,21 +44,25 @@ public class RegistrationPage {
 
         return this;
     }
+
     public RegistrationPage setLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
+
     public RegistrationPage setEmail(String value) {
         userEmailInput.setValue(value);
 
         return this;
     }
+
     public RegistrationPage setGender(String value) {
         genderWrapper.$(byText(value)).click();
 
         return this;
     }
+
     public RegistrationPage setUserNumber(String value) {
         userNumber.setValue(value);
 
@@ -115,7 +119,7 @@ public class RegistrationPage {
     }
 
 
-    public RegistrationPage checkResult (String key, String value) {
+    public RegistrationPage checkResult(String key, String value) {
         checkTableComponent.checkTable(key, value);
 
         return this;
